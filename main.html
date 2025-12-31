@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>A & G: The Re-Wedding</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Lato:wght@300;400;700;900&family=Caveat:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        // "primary": "#eebd45",
+                        // "primary-hover": "#dca526",
+                        "primary": "#7c9c86", // Tuscan Sage
+                        "primary-hover": "#637d6b",
+                        "accent": "#eebd45", // Honey Gold (for accents only)
+                        "charcoal": "#2d2a26",
+                        "sage": {
+                            50: "#f6f8f6",
+                            100: "#eaf0ec",
+                            200: "#cfded5",
+                            300: "#b0cbb9",
+                            500: "#7c9c86",
+                            600: "#637d6b",
+                        },
+                        "sand": {
+                            50: "#fcfbf9",
+                            100: "#f7f4ef",
+                            200: "#efeadd",
+                            300: "#e0d6c2",
+                            500: "#b0a590",
+                        },
+                    },
+                    fontFamily: {
+                        "display": ["Playfair Display", "serif"],
+                        "body": ["Lato", "sans-serif"],
+                        "handwriting": ["Caveat", "cursive"],
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom "Squishy" Button Effect */
+        .btn-squish:active {
+            transform: scale(0.95) translateY(2px);
+        }
+
+        /* Smooth hover for cards */
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px) scale(1.01);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-charcoal font-body overflow-x-hidden antialiased selection:bg-primary/30">
+
+    <nav
+        class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-sand-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a class="flex items-center gap-3 group" href="#">
+                    <div
+                        class="size-16 bg-sage-500 rounded-full flex items-center justify-center text-white font-display font-bold text-lg italic shadow-sm group-hover:bg-sage-600 transition-colors group-hover:rotate-12 transform duration-300">
+                        A&G
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-lg font-display font-bold tracking-tight text-charcoal leading-none">The
+                            Re-Wedding</span>
+                        <span class="text-xs font-body tracking-widest uppercase text-sage-500">July 3-5, 2026</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-bold uppercase tracking-wide text-charcoal/70 hover:text-sage-600 transition-colors"
+                        href="#story">Why Now?</a>
+                    <a class="text-sm font-bold uppercase tracking-wide text-charcoal/70 hover:text-sage-600 transition-colors"
+                        href="#itinerary">The Plan</a>
+                    <a class="text-sm font-bold uppercase tracking-wide text-charcoal/70 hover:text-sage-600 transition-colors"
+                        href="#details">Logistics</a>
+                    <a class="bg-charcoal hover:bg-black text-white text-sm font-bold px-7 py-3 rounded-full transition-all shadow-md btn-squish"
+                        href="#rsvp">
+                        RSVP
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button class="p-2 text-charcoal hover:text-sage-500 transition-colors">
+                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative w-full h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center"
+            style='background-image: url("./header.jpg"); filter: brightness(0.85);'>
+        </div>
+
+        <div
+            class="relative z-10 text-center px-4 max-w-5xl mx-auto flex flex-col items-center gap-32 animate-20de-in-up">
+            <div
+                class="inline-flex items-center gap-3 bg-white/90 backdrop-blur-md px-6 py-2 rounded-full mb-4 shadow-lg transform -rotate-2 hover:rotate-0 transition-transform duration-300 mt-4">
+                <span class="material-symbols-outlined text-sage-500 text-lg">flight_takeoff</span>
+                <span class="text-charcoal text-xs md:text-sm font-bold tracking-widest uppercase">Fivizzano,
+                    Tuscany</span>
+                <span class="text-sage-300">|</span>
+                <span class="text-charcoal text-xs md:text-sm font-bold tracking-widest uppercase">July 3–5,
+                    2026</span>
+            </div>
+
+            <h1
+                class="text-white text-5xl md:text-7xl lg:text-8xl font-display font-medium leading-[1] tracking-tight drop-shadow-xl mt-32">
+                15 Years Together.<br />
+                <span class="font-light italic text-accent">Still on the same path.</span><br />
+            </h1>
+
+            <p
+                class="text-sand-50 text-xl md:text-2xl font-body font-light max-w-4xl mt-4 rounded-lg drop-shadow-md leading-relaxed">
+                We signed the papers. We moved continents. We raised three amazing humans. <br />
+                Now, we are finally keeping our promise to celebrate together.
+            </p>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
+                <a class="bg-primary hover:bg-primary-hover text-white text-lg font-display font-bold px-10 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all btn-squish flex items-center justify-center gap-2"
+                    href="#rsvp">
+                    I'm In <span class="material-symbols-outlined">celebration</span>
+                </a>
+                <a class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/40 text-white text-lg font-display font-bold px-10 py-4 rounded-full shadow-lg transition-all flex items-center justify-center hover:border-white btn-squish"
+                    href="#story">
+                    Read the Excuse
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-sand-100 py-8 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 text-center">
+                <div class="flex flex-col items-center">
+                    <div class="flex text-accent mb-1">
+                        <span class="material-symbols-outlined text-base">star</span><span
+                            class="material-symbols-outlined text-base">star</span><span
+                            class="material-symbols-outlined text-base">star</span><span
+                            class="material-symbols-outlined text-base">star</span><span
+                            class="material-symbols-outlined text-base">star</span>
+                    </div>
+                    <p class="font-handwriting text-2xl text-charcoal font-bold">"Finally!"</p>
+                    <span class="text-xs uppercase tracking-widest text-charcoal/60 mt-1">Nonna Gianna</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="flex text-accent mb-1">
+                        <span class="material-symbols-outlined text-base">star</span><span
+                            class="material-symbols-outlined text-base">star</span><span
+                            class="material-symbols-outlined text-base">star</span><span
+                            class="material-symbols-outlined text-base">star</span><span
+                            class="material-symbols-outlined text-base">star</span>
+                    </div>
+                    <p class="font-handwriting text-2xl text-charcoal font-bold">"Can we eat cake?"</p>
+                    <span class="text-xs uppercase tracking-widest text-charcoal/60 mt-1">The Kids</span>
+                </div>
+                <div class="flex flex-col items-center hidden sm:flex">
+                    <div class="flex text-accent mb-1">
+                        <span class="material-symbols-outlined text-base">star</span><span
+                            class="material-symbols-outlined text-base">star</span><span
+                            class="material-symbols-outlined text-base">star</span><span
+                            class="material-symbols-outlined text-base">star</span><span
+                            class="material-symbols-outlined text-base">star</span>
+                    </div>
+                    <p class="font-handwriting text-2xl text-charcoal font-bold">"I'm ready."</p>
+                    <span class="text-xs uppercase tracking-widest text-charcoal/60 mt-1">The Dance Floor</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 md:py-32 bg-white relative overflow-hidden" id="story">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+
+                <div class="lg:col-span-6 flex flex-col gap-8 order-2 lg:order-1">
+                    <div class="flex flex-col gap-2">
+                        <span class="text-accent font-bold uppercase tracking-widest text-2xl font-body">A decade in
+                            Motion</span>
+                        <h2 class="text-5xl md:text-6xl font-display font-medium text-charcoal leading-[1.1]">
+                            Better Late <br /><span class="italic text-sage-500">Than Never</span>
+                        </h2>
+                    </div>
+                    <div class="prose prose-lg text-charcoal/80 leading-relaxed font-body">
+                        <p>
+                            <span class="text-5xl font-display float-left mr-2 text-accent">O</span>n April 27th, 2016,
+                            we signed our marriage papers at a courthouse in Manhattan, NYC. It was a quiet Thursday
+                            morning with exactly one witness, Olli, and two other friends, Fede and Jacopo—whom we had
+                            met in a completely random way (ask us for the story over a glass of wine).
+                            We were (very!) young, and while uncertainty was all around us, we knew we had each other.
+                        </p>
+                    </div>
+                    <div class="prose prose-lg text-charcoal/80 leading-relaxed font-body">
+                        <p>
+                            <span class="text-5xl font-display float-left mr-2 text-accent">S</span>ince then, we have
+                            moved across continents, raised three chaotic children, and built a home away from home.
+                            Through every move and every milestone, we never forgot our promise to
+                            eventually throw the celebration we skipped. So, pack your bags! We are finally gathering
+                            the village to toast the ten-year journey that brought us here. Think of it as a long
+                            dinner party followed by a night on the dance floor that has been a decade in the making.
+                        </p>
+                    </div>
+
+                    <div class="bg-sand-50 p-6 rounded-xl border-2 border-dashed border-accent relative">
+                        <div
+                            class="absolute -top-3 left-6 bg-accent text-white text-xs font-bold px-2 py-1 uppercase rounded">
+                            TL; DR</div>
+                        <p class="font-handwriting text-2xl text-charcoal/80">
+                            A decade of miles, moves, and three kids later, we are finally throwing the party that
+                            honors the journey and the people who walked it with us.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-6 pt-4 border-t border-sand-200">
+                        <div class="text-center">
+                            <span class="block text-4xl font-display italic text-sage-500">3,720</span>
+                            <span class="text-xs font-bold text-charcoal/50 uppercase tracking-widest mt-1">Days
+                                Married</span>
+                        </div>
+                        <div class="text-center border-l border-sand-200">
+                            <span class="block text-4xl font-display italic text-sage-500">3</span>
+                            <span class="text-xs font-bold text-charcoal/50 uppercase tracking-widest mt-1">L-*
+                                Kids</span>
+                        </div>
+                        <div class="text-center border-l border-sand-200">
+                            <span class="block text-4xl font-display italic text-sage-500">∞</span>
+                            <span class="text-xs font-bold text-charcoal/50 uppercase tracking-widest mt-1">Workouts
+                                Together</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 order-1 lg:order-2 mt-12 lg:mt-0">
+                    <div class="relative">
+                        <!-- Decorative Blobs -->
+                        <div
+                            class="absolute -top-20 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-blob">
+                        </div>
+                        <div
+                            class="absolute -bottom-20 -left-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-blob animation-delay-2000">
+                        </div>
+
+                        <!-- MOBILE & TABLET STACK (Visible up to md breakpoint) -->
+                        <div class="md:hidden flex flex-col items-center gap-12">
+                            <!-- Then: Comes first on small screens -->
+                            <div class="w-2/3 max-w-[280px]">
+                                <div class="bg-white p-3 pb-10 shadow-xl transform -rotate-3 border border-sand-100">
+                                    <div class="w-full aspect-[3/4] bg-cover bg-center grayscale"
+                                        style='background-image: url("./then.jpg");'>
+                                    </div>
+                                    <p class="mt-4 text-center font-handwriting text-charcoal/60 text-xl">
+                                        Then (Waiting for Leo)
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Now: Emerges second -->
+                            <div class="relative w-full px-4">
+                                <div class="w-full aspect-video bg-cover bg-center rounded-2xl shadow-2xl border-4 border-white"
+                                    style='background-image: url("./now.jpg");'>
+                                </div>
+                                <div
+                                    class="absolute -bottom-4 right-8 bg-white px-4 py-1 rounded-full shadow-lg border border-sand-200">
+                                    <p class="font-handwriting text-charcoal text-xl">Now (Full House, Full Hearts)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- DESKTOP OVERLAP (Visible from md breakpoint and up) -->
+                        <div class="hidden md:block relative">
+                            <!-- Now: Main Anchor, emerges more -->
+                            <div class="relative z-10 w-full group">
+                                <div class="w-full aspect-video bg-cover bg-center rounded-[2rem] shadow-2xl border-8 border-white transform transition-all duration-500 hover:rotate-1"
+                                    style='background-image: url("./now.jpg");'>
+                                </div>
+                                <div
+                                    class="absolute -bottom-6 -right-4 bg-white px-6 py-2 rounded-full shadow-lg transform rotate-2 border border-sand-200">
+                                    <p class="font-handwriting text-charcoal text-2xl">
+                                        Now (Full House, Full Hearts)
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Then: Floating Polaroid -->
+                            <div class="absolute -top-60 -left-24 z-20 w-1/3 min-w-[200px]">
+                                <div
+                                    class="bg-white p-3 pb-4 shadow-2xl transform -rotate-12 hover:-rotate-3 transition-all duration-500 border border-sand-100">
+                                    <div class="w-full aspect-[3/4] bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-700"
+                                        style='background-image: url("./then.jpg");'>
+                                    </div>
+                                    <p class="mt-4 text-center font-handwriting text-charcoal/60 text-xl">
+                                        Then (Waiting for Leo)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-sand-50" id="itinerary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <span class="text-sage-500 font-bold uppercase tracking-widest text-2xl mb-3 block">The Game
+                    Plan</span>
+                <h2 class="text-5xl md:text-6xl font-display font-medium text-charcoal mb-6">Eat, Drink, Compete
+                </h2>
+                <p class="text-lg text-charcoal/70 font-light leading-relaxed">
+                    We've curated a weekend that is 40% sentimental, 40% competitive, and 20%
+                    carbohydrate-based.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+                <div
+                    class="group relative bg-sand-200 rounded-2xl p-8 flex flex-col justify-between min-h-[400px] hover-lift overflow-hidden cursor-default">
+                    <div
+                        class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity transform group-hover:scale-110 duration-500">
+                        <span class="material-symbols-outlined text-[120px] text-charcoal">wine_bar</span>
+                    </div>
+                    <div>
+                        <div
+                            class="w-12 h-12 border-2 border-charcoal/10 rounded-full flex items-center justify-center mb-6 bg-white shadow-sm">
+                            <span class="material-symbols-outlined text-2xl text-charcoal">wine_bar</span>
+                        </div>
+                        <span
+                            class="inline-block px-3 py-1 bg-white/60 text-charcoal text-xs font-bold uppercase tracking-wider rounded-full mb-4">Friday,
+                            July 3rd</span>
+                        <h3 class="text-3xl font-display font-medium text-charcoal mb-2">The Welcome</h3>
+                        <div class="w-10 h-0.5 bg-charcoal/20 my-4"></div>
+                        <p class="text-charcoal/80 text-sm leading-relaxed">
+                            We kick things off at a winery. Expect local wine, non-alcoholic refreshers, and
+                            finger
+                            food to soak up the sunset.<br /><br />
+                            <span
+                                class="font-handwriting text-xl font-bold bg-white/30 px-2 py-1 rotate-1 inline-block">Goal:
+                                Warm-Up</span>
+                        </p>
+                    </div>
+                    <div
+                        class="mt-8 pt-4 border-t border-charcoal/10 flex-col items-center gap-1 text-sm text-charcoal/60">
+                        <!-- <span class="material-symbols-outlined text-lg">checkroom</span> Dress: Casual Chic -->
+                        <a href="https://monasterofratibianchi.it/" target="_blank"
+                            class="flex items-center gap-2 hover:text-charcoal transition-colors">
+                            <span class="material-symbols-outlined text-lg">place</span> Monastero dei Frati Bianchi,
+                            Podere La Rocca [LINK]
+                        </a>
+                        <span class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-lg">schedule</span> 6:00 PM - Lateish
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative bg-accent rounded-2xl p-8 flex flex-col justify-between min-h-[400px] hover-lift overflow-hidden text-charcoal cursor-default">
+                    <div
+                        class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity transform group-hover:rotate-12 duration-500">
+                        <span class="material-symbols-outlined text-[120px]">pool</span>
+                    </div>
+                    <div>
+                        <div
+                            class="w-12 h-12 border-2 border-charcoal/10 rounded-full flex items-center justify-center mb-6 bg-white/90 shadow-sm">
+                            <span class="material-symbols-outlined text-2xl">sports_score</span>
+                        </div>
+                        <span
+                            class="inline-block px-3 py-1 bg-white/40 text-charcoal text-xs font-bold uppercase tracking-wider rounded-full mb-4">Sat
+                            AM, July 4th</span>
+                        <h3 class="text-3xl font-display font-medium mb-2">Giochi Senza Frontiere</h3>
+                        <div class="w-10 h-0.5 bg-charcoal/20 my-4"></div>
+                        <p class="text-charcoal/90 text-sm leading-relaxed">
+                            The legendary "Games Without Frontiers"! We are heading to the pool for water-based
+                            team
+                            challenges. This is not a spectator sport (mostly).<br /><br />
+                            <span
+                                class="font-handwriting text-xl font-bold bg-white/30 px-2 py-1 rotate-1 inline-block">Warning:
+                                You will get wet.</span>
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-charcoal/10 flex flex-col gap-1 text-sm text-charcoal/70">
+                        <span class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-lg">place</span> Poolside [Location TBD].
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-lg">restaurant</span> Lunch will be
+                            provided.
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-lg">backpack</span> Bring: Swimsuit AND
+                            Sneakers.
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-lg">schedule</span> 9:00 AM - 1:00 PM
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative bg-sage-500 rounded-2xl p-8 flex flex-col justify-between min-h-[400px] hover-lift overflow-hidden cursor-default">
+                    <div
+                        class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity transform group-hover:scale-110 duration-500">
+                        <span class="material-symbols-outlined text-[120px] text-white">nightlife</span>
+                    </div>
+                    <div>
+                        <div
+                            class="w-12 h-12 border-2 border-white/20 rounded-full flex items-center justify-center mb-6 bg-white/90 shadow-sm">
+                            <span class="material-symbols-outlined text-2xl text-sage-600">diamond</span>
+                        </div>
+                        <span
+                            class="inline-block px-3 py-1 bg-white/40 text-charcoal text-xs font-bold uppercase tracking-wider rounded-full mb-4">Sat
+                            PM, July 4th</span>
+                        <h3 class="text-3xl font-display font-medium text-white mb-2">The Main Event</h3>
+                        <div class="w-10 h-0.5 bg-white/40 my-4"></div>
+                        <p class="text-white/90 text-sm leading-relaxed">
+                            A short ceremony (we promise!) to celebrate that after 15 years and a thousand
+                            changes, Ale
+                            and Gio still love each other. Followed by an excessive feast under
+                            the stars.<br /><br />
+                            <span
+                                class="font-handwriting text-xl font-bold bg-white/30 px-2 py-1 rotate-1 inline-block">Dancing
+                                is mandatory!</span>
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-white/20 flex flex-col gap-2 text-sm text-white/90">
+                        <a href="https://maps.app.goo.gl/WTDKr8EDNPwfJLvt6" target="_blank"
+                            class="flex items-center gap-2 hover:text-charcoal transition-colors">
+                            <span class="material-symbols-outlined text-lg">place</span> Pieve di San Martino a Viano
+                            [LINK]
+                        </a>
+                        <span class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-lg">child_care</span> Kids' Party with
+                            entertainment and sleeping space in the church so parents can enjoy the night. RSVP
+                            required!
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-lg">schedule</span> 6:00 PM - sunrise
+                        </span>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative bg-white border border-sand-200 rounded-2xl p-8 flex flex-col justify-between min-h-[400px] hover-lift overflow-hidden cursor-default">
+                    <div class="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <span class="material-symbols-outlined text-[120px] text-charcoal">coffee</span>
+                    </div>
+                    <div>
+                        <div
+                            class="w-12 h-12 border-2 border-sand-200 rounded-full flex items-center justify-center mb-6 bg-sand-50 shadow-sm">
+                            <span class="material-symbols-outlined text-2xl text-primary">bakery_dining</span>
+                        </div>
+                        <span
+                            class="inline-block px-3 py-1 bg-sand-100 text-charcoal/70 text-xs font-bold uppercase tracking-wider rounded-full mb-4">Sun,
+                            July 5th</span>
+                        <h3 class="text-3xl font-display font-medium text-charcoal mb-2">The Recovery</h3>
+                        <div class="w-10 h-0.5 bg-sand-300 my-4"></div>
+                        <p class="text-charcoal/70 text-sm leading-relaxed">
+                            Late morning breakfast. Strong coffee, fresh croissants, and ibuprofen. Come say
+                            goodbye
+                            before you head home or (for the visitors from overseas) explore Italy.<br /><br />
+                            <span
+                                class="font-handwriting text-xl font-bold bg-black/5 px-2 py-1 rotate-1 inline-block">Requirement:
+                                Zero effort.</span>
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-sand-100 flex flex-col gap-1 text-sm text-charcoal/50">
+                        <span class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-lg">place</span> Location: TBD [somewhere in
+                            Fivizzano]
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-lg">schedule</span> 11:00 AM - 1:00 PM
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white" id="details">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-display font-medium text-charcoal">The Fine Print</h2>
+                <p class="text-sage-500 font-handwriting text-4xl mt-2 transform -rotate-1">Stuff you need to know.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+                <div
+                    class="flex flex-col gap-4 items-center md:items-start group hover:-translate-y-1 transition-transform duration-300">
+                    <div
+                        class="size-16 rounded-full bg-sand-50 flex items-center justify-center mb-2 group-hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-accent text-3xl">wb_sunny</span>
+                    </div>
+                    <!-- <h3 class="text-xl font-bold font-display uppercase tracking-wide">Dress Code</h3>
+                    <p class="text-charcoal/70 text-base leading-relaxed">
+                        <strong>Tuscan Summer Chic.</strong> Think linens, light colors, and flowy things. <br /><br />
+                        <span class="bg-primary/20 px-1 font-bold text-charcoal">DO NOT</span> wear stilettos. The
+                        ground is grass. You will sink. We will laugh.
+                    </p> -->
+                    <h3 class="text-xl font-bold font-display uppercase tracking-wide">Beat the Heat</h3>
+                    <div class="text-charcoal/70 text-base leading-relaxed space-y-3">
+                        <p>It’s July in Tuscany. We want you cool and comfortable. We're leaning into landscape
+                            colors:
+                            <strong>Sage, Sand, and White.</strong>
+                        </p>
+                        <p><strong>Men:</strong> Linen or cotton in light tones. We recommend no dark suits or
+                            tuxedos—you will regret it in the sun.</p>
+                        <p><strong>Women:</strong> Flowy dresses and breathable fabrics. DO NOT wear stilettos.
+                            The ground is grass. You will sink. We will laugh.</p>
+                        <!--<p>Wear flats or wedges for the grass and stone paths.</p>-->
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col gap-4 items-center md:items-start group hover:-translate-y-1 transition-transform duration-300">
+                    <div
+                        class="size-16 rounded-full bg-sand-50 flex items-center justify-center mb-2 group-hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-accent text-3xl">block</span>
+                    </div>
+                    <h3 class="text-xl font-bold font-display uppercase tracking-wide">No Gifts</h3>
+                    <p class="text-charcoal/70 text-base leading-relaxed">
+                        We don't own a toaster, and we definitely don't need one. We have a house full of stuff
+                        and
+                        hearts full of gratitude.
+                        <br /><br />
+                        The bar is open, the food is plenty,
+                        and your presence is the only gift we want. <br /><br />
+                        <strong>Seriously. No gifts.</strong>
+                    </p>
+                </div>
+                <div
+                    class="flex flex-col gap-4 items-center md:items-start group hover:-translate-y-1 transition-transform duration-300">
+                    <div
+                        class="size-16 rounded-full bg-sand-50 flex items-center justify-center mb-2 group-hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-accent text-3xl">bed</span>
+                    </div>
+                    <h3 class="text-xl font-bold font-display uppercase tracking-wide">Accommodations</h3>
+                    <p class="text-charcoal/70 text-base leading-relaxed">
+                        We have blocked rooms nearby. It is first-come, first-served. <br /><br />
+                        <span class="italic">Don't be that person who books the day before (says Joel).</span>
+                    </p>
+                    <button class="text-primary-hover font-bold text-sm hover:underline flex items-center gap-1 mt-2">
+                        View Options <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-sage-50" id="rsvp">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-[2rem] shadow-2xl overflow-hidden border border-sand-200">
+                <div class="bg-charcoal p-10 text-center relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10">
+                    </div>
+                    <h2 class="text-4xl font-display font-medium text-white relative z-10">R.S.V.P.</h2>
+                    <p class="text-accent font-light mt-3 relative z-10 font-handwriting text-2xl">Are you coming?</p>
+                </div>
+                <div class="p-8 md:p-12">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col gap-10">
+                        <input type="hidden" name="access_key" value="3564c48b-4366-4a4a-9ea1-87e5dcae70ea">
+                        <input type="hidden" name="from_name" value="A&G Re-Wedding">
+                        <input type="hidden" name="subject" value="A&G Re-Wedding: New RSVP Submission">
+                        <!-- Honeypot: Ensure this remains hidden and UNCHECKED -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <div class="flex flex-col gap-3">
+                            <label class="block text-sm font-bold uppercase tracking-widest text-charcoal/60">Who are
+                                you?</label>
+                            <input type="text" name="name" required placeholder="Full Name(s)"
+                                class="w-full bg-sand-50 border-0 border-b-2 border-sand-300 focus:border-sage-500 focus:ring-0 px-0 py-3 text-lg placeholder:text-gray-400 transition-colors">
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <span
+                                class="block text-sm font-bold uppercase tracking-widest text-charcoal/60">Attendance</span>
+                            <div class="grid grid-cols-2 gap-4">
+                                <label
+                                    class="relative flex items-center justify-center gap-3 cursor-pointer p-4 rounded-xl border-2 border-sand-200 hover:border-sage-500 transition-all has-[:checked]:border-sage-500 has-[:checked]:bg-sage-50 hover:shadow-md btn-squish">
+                                    <input type="radio" name="attendance" value="Yes" required class="sr-only">
+                                    <span
+                                        class="material-symbols-outlined text-sage-500">sentiment_very_satisfied</span>
+                                    <span class="text-charcoal font-bold">I'm in for the chaos</span>
+                                </label>
+                                <label
+                                    class="relative flex items-center justify-center gap-3 cursor-pointer p-4 rounded-xl border-2 border-sand-200 hover:border-red-400 transition-all has-[:checked]:border-red-400 has-[:checked]:bg-red-50 hover:shadow-md btn-squish">
+                                    <input type="radio" name="attendance" value="No" class="sr-only">
+                                    <span
+                                        class="material-symbols-outlined text-red-400">sentiment_very_dissatisfied</span>
+                                    <span class="text-charcoal font-bold">I hate fun (No)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="p-8 bg-sand-50 rounded-2xl flex flex-col gap-6 border border-sand-200">
+                            <span class="block text-base font-bold uppercase tracking-widest text-charcoal/60">The
+                                Event Checklist</span>
+                            <p class="text-base text-charcoal/50 mb-3">(We'd really love to see you Saturday
+                                night—Friday,
+                                Saturday morning, Sunday are totally optional!)</p>
+                            <label class="flex items-start gap-4 cursor-pointer group">
+                                <input type="checkbox" name="friday_welcome" value="Attending"
+                                    class="w-6 h-6 rounded border-sand-300 text-sage-600 focus:ring-accent transition-all">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="text-charcoal font-bold group-hover:text-sage-600 transition-colors">Friday:
+                                        Welcome Party</span>
+                                    <span class="text-sm text-charcoal/60 italic">"Count me in for winery
+                                        views."</span>
+                                </div>
+                            </label>
+                            <label class="flex items-start gap-4 cursor-pointer group">
+                                <input type="checkbox" name="saturday_morning" value="Attending" checked
+                                    class="w-6 h-6 rounded border-sand-300 text-sage-600 focus:ring-sage-500 transition-all">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="text-charcoal font-bold group-hover:text-sage-600 transition-colors">Saturday
+                                        Morning: Will you compete?</span>
+                                    <span class="text-sm text-charcoal/60 italic">"Count me in, coach."</span>
+                                </div>
+                            </label>
+                            <label class="flex items-start gap-4 cursor-pointer group">
+                                <input type="checkbox" name="saturday_main" value="Attending" checked
+                                    class="w-6 h-6 rounded border-sand-300 text-sage-600 focus:ring-sage-500 transition-all">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="text-charcoal font-bold group-hover:text-sage-600 transition-colors">Saturday
+                                        Night: Ceremony & Party</span>
+                                    <span class="text-sm text-charcoal/60 italic">"I promise to dance."</span>
+                                </div>
+                            </label>
+                            <label class="flex items-start gap-4 cursor-pointer group">
+                                <input type="checkbox" name="sunday_recovery" value="Attending"
+                                    class="w-6 h-6 rounded border-sand-300 text-sage-600 focus:ring-sage-500 transition-all">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="text-charcoal font-bold group-hover:text-sage-600 transition-colors">Sunday:
+                                        Recovery Brunch</span>
+                                    <span class="text-sm text-charcoal/60 italic">"I will need coffee."</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="flex flex-col gap-3">
+                                <label
+                                    class="block text-sm font-bold uppercase tracking-widest text-charcoal/60">Bringing
+                                    Kids?</label>
+                                <p class="text-sm text-charcoal/50 mb-1">List names/ages so we can bribe them.</p>
+                                <input type="text" name="kids_info" placeholder="e.g. Leo (9), Lily (7), Luna (1)"
+                                    class="w-full rounded-lg border-gray-200 bg-gray-50 text-sm py-2 px-3 focus:ring-primary focus:border-primary">
+                            </div>
+                            <div class="flex flex-col gap-3">
+                                <span class="block text-sm font-bold uppercase tracking-widest text-charcoal/60">Kids'
+                                    Activities</span>
+                                <p class="text-sm text-charcoal/50 mb-1 -mt-3">For Saturday night.</p>
+
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" name="kids_entertainment" value="Yes" class="sr-only peer">
+                                    <div
+                                        class="w-14 h-7 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary">
+                                    </div>
+                                    <span class="ml-3 text-sm font-medium text-charcoal">Kids' Entertainment?</span>
+                                </label>
+
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" name="kids_sleepover" value="Yes" class="sr-only peer">
+                                    <div
+                                        class="w-14 h-7 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary">
+                                    </div>
+                                    <span class="ml-3 text-sm font-medium text-charcoal">Sleepover Party?</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-3">
+                            <label class="block text-sm font-bold uppercase tracking-widest text-charcoal/60">Dietary
+                                Restrictions</label>
+                            <input type="text" name="dietary" placeholder="I eat everything / Gluten Free / Vegan..."
+                                class="w-full bg-sand-50 border-0 border-b-2 border-sand-300 focus:border-sage-500 focus:ring-0 px-0 py-3 text-sm placeholder:text-gray-400 transition-colors">
+                        </div>
+
+                        <div class="flex flex-col gap-3">
+                            <label class="block text-sm font-bold uppercase tracking-widest text-charcoal/60">Song
+                                Request</label>
+                            <textarea name="song_request" rows="2"
+                                placeholder="What song will get you on the dance floor?"
+                                class="w-full bg-sand-50 border-0 border-b-2 border-sand-300 focus:border-sage-500 focus:ring-0 px-0 py-3 text-sm placeholder:text-gray-400 transition-colors"></textarea>
+                        </div>
+
+                        <div class="flex flex-col gap-3">
+                            <label class="block text-sm font-bold uppercase tracking-widest text-charcoal/60">Any other
+                                comments?</label>
+                            <textarea name="comments" rows="2" placeholder="Questions? Heckling? Excitement?"
+                                class="w-full bg-sand-50 border-0 border-b-2 border-sand-300 focus:border-sage-500 focus:ring-0 px-0 py-3 text-sm placeholder:text-gray-400 transition-colors"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="mt-4 w-full bg-charcoal hover:bg-black text-white font-display font-medium text-xl py-5 rounded-xl shadow-lg transform transition-all btn-squish flex items-center justify-center gap-3">
+                            Lock It In <span class="material-symbols-outlined text-accent">send</span>
+                        </button>
+                        <p class="text-center text-sm text-charcoal/40 italic">By clicking this you legally agree to
+                            have fun.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-charcoal text-sand-100 py-16 border-t border-white/5 relative overflow-hidden">
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-primary/5 blur-[100px] rounded-full pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 text-center flex flex-col items-center gap-8 relative z-10">
+            <div
+                class="size-20 bg-white/5 rounded-full flex items-center justify-center text-white font-display font-bold text-2xl italic border border-white/10 hover:rotate-180 transition-transform duration-700">
+                A&G
+            </div>
+            <p class="text-white/60 font-light max-w-md mx-auto leading-relaxed">
+                Built with love.<br />Funded by a decade of saying "Go go go!".<br />See you in
+                Tuscany.
+            </p>
+            <p class="text-xs text-white/20 mt-8 font-mono">© 2026 A & G Re-wedding. No refunds on travel. No
+                crying
+                during the games.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
