@@ -342,13 +342,20 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
 
-                <div
-                    class="group relative bg-sand-200 rounded-2xl p-8 flex flex-col justify-between min-h-[400px] hover-lift overflow-hidden cursor-default">
+                <div class="group relative bg-sand-200 rounded-2xl p-8 flex flex-col justify-between min-h-[400px] hover-lift overflow-hidden cursor-default bg-cover bg-center"
+                    style="background-image: url('./fratibianchi2.jpg');">
+                    <!-- 1. Grayscale ONLY the image (bottom layer) -->
+                    <!-- <div class="absolute inset-0 bg-black/20 backdrop-grayscale"></div> -->
+
+                    <!-- 2. Tint with Sand color (top layer) -->
+                    <!-- Using /90 opacity to make sure text is readable since sand is light -->
+                    <div class="absolute inset-0 bg-sand-500/90 mix-blend-screen"></div>
                     <div
-                        class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity transform group-hover:scale-110 duration-500">
+                        class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity transform group-hover:scale-110 duration-500 z-10">
                         <span class="material-symbols-outlined text-[120px] text-charcoal">wine_bar</span>
                     </div>
-                    <div>
+
+                    <div class="relative z-10">
                         <div
                             class="w-12 h-12 border-2 border-charcoal/10 rounded-full flex items-center justify-center mb-6 bg-white shadow-sm">
                             <span class="material-symbols-outlined text-2xl text-charcoal">wine_bar</span>
@@ -367,8 +374,8 @@
                                 Warm-Up</span>
                         </p>
                     </div>
-                    <div
-                        class="mt-8 pt-4 border-t border-charcoal/10 flex-col items-center gap-1 text-sm text-charcoal/60">
+                    <div class="relative z-10 mt-8 pt-4 border-t border-charcoal/10 flex-col items-center gap-1 text-sm
+                        text-charcoal/60">
                         <!-- <span class="material-symbols-outlined text-lg">checkroom</span> Dress: Casual Chic -->
                         <a href="https://monasterofratibianchi.it/" target="_blank"
                             class="flex items-center gap-2 hover:text-charcoal transition-colors">
@@ -424,13 +431,19 @@
                     </div>
                 </div>
 
-                <div
-                    class="group relative bg-sage-500 rounded-2xl p-8 flex flex-col justify-between min-h-[400px] hover-lift overflow-hidden cursor-default">
+                <div class="group relative bg-sage-500 rounded-2xl p-8 flex flex-col justify-between min-h-[400px] hover-lift overflow-hidden cursor-default bg-cover bg-center"
+                    style="background-image: url('./pieve_viano2.jpg');">
+
+                    <!-- 1. Grayscale ONLY the image (bottom layer) -->
+                    <!-- <div class="absolute inset-0 bg-black/20 backdrop-grayscale"></div> -->
+                    <!-- 2. Tint the now-gray image with your color (top layer) -->
+                    <div class="absolute inset-0 bg-sage-600/100 mix-blend-multiply"></div>
                     <div
-                        class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity transform group-hover:scale-110 duration-500">
+                        class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity transform group-hover:scale-110 duration-500 z-10">
                         <span class="material-symbols-outlined text-[120px] text-white">nightlife</span>
                     </div>
-                    <div>
+
+                    <div class="relative z-10">
                         <div
                             class="w-12 h-12 border-2 border-white/20 rounded-full flex items-center justify-center mb-6 bg-white/90 shadow-sm">
                             <span class="material-symbols-outlined text-2xl text-sage-600">diamond</span>
@@ -442,17 +455,17 @@
                         <div class="w-10 h-0.5 bg-white/40 my-4"></div>
                         <p class="text-white/90 text-sm leading-relaxed">
                             A short ceremony (we promise!) to celebrate that after 15 years and a thousand
-                            changes, Ale
-                            and Gio still love each other. Followed by an excessive feast under
+                            changes, Ale and Gio still love each other. Followed by an excessive feast under
                             the stars.<br /><br />
                             <span
                                 class="font-handwriting text-xl font-bold bg-white/30 px-2 py-1 rotate-1 inline-block">Dancing
                                 is mandatory!</span>
                         </p>
                     </div>
-                    <div class="mt-8 pt-4 border-t border-white/20 flex flex-col gap-2 text-sm text-white/90">
+                    <div
+                        class="relative z-10 mt-8 pt-4 border-t border-white/20 flex flex-col gap-2 text-sm text-white">
                         <a href="https://maps.app.goo.gl/WTDKr8EDNPwfJLvt6" target="_blank"
-                            class="flex items-center gap-2 hover:text-charcoal transition-colors">
+                            class="flex items-center gap-2 hover:text-sage-300 transition-colors">
                             <span class="material-symbols-outlined text-lg">place</span> Pieve di San Martino a Viano
                             [LINK]
                         </a>
