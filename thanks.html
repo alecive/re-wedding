@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Grazie! | A & G Re-Wedding</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700&family=Lato:wght@300;400;700&family=Caveat:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7c9c86",
+                        "accent": "#eebd45",
+                        "charcoal": "#2d2a26",
+                        "sand": { 50: "#fcfbf9", 100: "#f7f4ef", 200: "#efeadd" }
+                    },
+                    fontFamily: {
+                        "display": ["Playfair Display", "serif"],
+                        "body": ["Lato", "sans-serif"],
+                        "handwriting": ["Caveat", "cursive"],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-sand-100 text-charcoal font-body min-h-screen flex items-center justify-center p-4">
+    <div
+        class="max-w-xl w-full bg-white rounded-[2.5rem] shadow-2xl p-12 text-center border border-sand-200 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-2 bg-primary"></div>
+
+        <div class="size-20 bg-sage-50 rounded-full flex items-center justify-center text-primary mx-auto mb-8">
+            <span class="material-symbols-outlined text-5xl">check_circle</span>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl font-display font-medium mb-4">Grazie Mille!</h1>
+        <p class="font-handwriting text-accent text-3xl mb-8">We've got your RSVP.</p>
+
+        <div class="prose prose-lg text-charcoal/70 mb-10 leading-relaxed">
+            <p>Your details have been locked in. We're so excited to share this weekend with you in Fivizzano!</p>
+            <p class="italic mt-4">If you need help with accommodations, please email Giorgia at
+                giorgiamancioppi [@] gmail.com to coordinate your stay.</p>
+        </div>
+
+        <a href="/"
+            class="inline-flex items-center gap-2 bg-charcoal hover:bg-black text-white px-8 py-4 rounded-full font-display font-bold transition-all transform hover:-translate-y-1">
+            <span class="material-symbols-outlined">arrow_back</span>
+            Back to the Site
+        </a>
+
+        <!-- Decorative background element -->
+        <div class="absolute -bottom-12 -right-12 size-40 bg-primary/5 rounded-full blur-3xl"></div>
+    </div>
+</body>
+
+</html>
