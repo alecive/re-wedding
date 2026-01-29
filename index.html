@@ -615,6 +615,18 @@
                                 class="w-full bg-sand-50 border-0 border-b-2 border-sand-300 focus:border-sage-500 focus:ring-0 px-0 py-3 text-lg placeholder:text-gray-400 transition-colors">
                         </div>
 
+                        <div class="flex flex-col gap-3">
+                            <label class="flex items-center gap-3 cursor-pointer w-fit">
+                                <input type="checkbox" name="has_plus_one" id="has_plus_one" value="Yes"
+                                    class="w-5 h-5 rounded border-sand-300 text-sage-600 focus:ring-sage-500 transition-all"
+                                    onchange="document.getElementById('plus_one_input').classList.toggle('hidden', !this.checked); if(this.checked) document.getElementById('plus_one_input').focus();">
+                                <span class="text-sm font-bold uppercase tracking-widest text-charcoal/60">I'm bringing
+                                    a +1</span>
+                            </label>
+                            <input type="text" name="plus_one_name" id="plus_one_input" placeholder="Guest Name"
+                                class="w-full bg-sand-50 border-0 border-b-2 border-sand-300 focus:border-sage-500 focus:ring-0 px-0 py-3 text-lg placeholder:text-gray-400 transition-colors hidden">
+                        </div>
+
                         <div class="flex flex-col gap-4">
                             <span
                                 class="block text-sm font-bold uppercase tracking-widest text-charcoal/60">Attendance</span>
